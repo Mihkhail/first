@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double firstValue, secondValue, thirdValue;
+
+            Console.WriteLine("Введите первое число");
+
+            firstValue = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число");
+
+            secondValue = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите третье число");
+
+            thirdValue = double.Parse(Console.ReadLine());
+
+            double result1 = firstValue + secondValue + thirdValue;
+            double result2 = firstValue * secondValue * thirdValue;
+
+            Console.WriteLine("Сумма чисел: " + result1);
+            Console.WriteLine("Произведение чисел: " + result2);
+
+        }
+    }
+}
