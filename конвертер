@@ -1,0 +1,23 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double UsdToRub = 76.01;
+            double UsdToUah = 27.96;
+            double USD;
+
+            Console.WriteLine("ВВедите сумму USD");
+
+            USD = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(USD + " в RUB = " + USD * UsdToRub);
+
+            Console.WriteLine(USD + " в UAH = " + USD * UsdToUah);
+
+        }
+    }
+}
