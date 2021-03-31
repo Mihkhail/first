@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool isIfected = false;
+
+            if (isIfected)
+            {
+                Console.WriteLine("Персонаж инфицирован");
+            }
+            else
+            {
+                Console.WriteLine("Персонаж здоров");
+            }
+
+        }
+    }
+}
