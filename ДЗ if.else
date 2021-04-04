@@ -1,0 +1,25 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int evenNumber;
+
+            evenNumber = int.Parse(Console.ReadLine());
+
+            
+            if (evenNumber % 2 == 0 )
+            {
+                Console.WriteLine("Число чётное");
+            }
+            else
+            {
+                Console.WriteLine("Число нечётное");
+            }
+
+        }
+    }
+}
