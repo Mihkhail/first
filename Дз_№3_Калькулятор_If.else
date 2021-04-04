@@ -1,0 +1,56 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double NumOne;
+            double NumTwo;
+            string operation;
+
+            Console.WriteLine("Введите тип операции");
+            operation = (Console.ReadLine());
+
+            Console.WriteLine("Введите первое число");
+            NumOne = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число");
+            NumTwo = double.Parse(Console.ReadLine());
+
+            
+
+            if (operation == "*" )
+            {
+                Console.WriteLine("Результат: ");
+                Console.WriteLine(NumOne * NumTwo);
+            }
+            if (operation == "+")
+            {
+                Console.WriteLine("Результат: ");
+                Console.WriteLine(NumOne + NumTwo);
+            }
+            if (operation == "-")
+            {
+                Console.WriteLine("Результат: ");
+                Console.WriteLine(NumOne - NumTwo);
+            }
+            if (operation == "/")
+            {
+                Console.WriteLine("Результат: ");
+                Console.WriteLine(NumOne / NumTwo);
+            }
+            if (operation == "%")
+            {
+                Console.WriteLine("Результат: ");
+                Console.WriteLine(NumOne % NumTwo);
+            }
+            else
+            {
+                Console.WriteLine("Неизвестный тип операции, попробуйте ещё раз");
+            }
+
+        }
+    }
+}
