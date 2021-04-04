@@ -32,8 +32,13 @@ namespace ConsoleApp1
                     break;
 
                 case "/":
-                    Console.WriteLine("Ответ: ");
-                    Console.WriteLine(NumOne / NumTwo);
+                    if (NumTwo == 0)
+                    
+                        Console.WriteLine(0);
+                    else
+                    
+                        Console.WriteLine("Ответ: ");
+                        Console.WriteLine(NumOne / NumTwo);
                     break;
 
                 case "*":
