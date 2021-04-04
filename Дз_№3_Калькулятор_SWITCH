@@ -6,58 +6,74 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            double NumOne;
-            double NumTwo;
-            string operation;
-
-            Console.WriteLine("Выберите тип операции: + - * / % ");
-            operation = (Console.ReadLine());
-
-            Console.WriteLine("Введите первое число");
-            NumOne = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Введите второе число");
-            NumTwo = double.Parse(Console.ReadLine());
-
-            switch (operation)
+            while (true)
             {
-                case "+":
-                    Console.WriteLine("Ответ: ");
-                    Console.WriteLine(NumOne + NumTwo);
-                    break;
+                Console.Clear();
+                double NumOne;
+                double NumTwo;
+                string operation;
 
-                case "-":
-                    Console.WriteLine("Ответ: ");
-                    Console.WriteLine(NumOne - NumTwo);
-                    break;
+                Console.WriteLine("Выберите тип операции: + - * / % ");
+                operation = (Console.ReadLine());
 
-                case "/":
-                    if (NumTwo == 0)
-                    
-                        Console.WriteLine(0);
-                    else
-                    
+                try
+                {
+                    Console.WriteLine("Введите первое число");
+                    NumOne = double.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Введите второе число");
+                    NumTwo = double.Parse(Console.ReadLine());
+                }
+                catch(Exception)
+                {
+                    Console.WriteLine("Ошибка программы! Нужно вводить числа!");
+                    Console.ReadLine();
+                    continue;
+                }
+
+                switch (operation)
+                {
+                    case "+":
                         Console.WriteLine("Ответ: ");
+                        Console.WriteLine(NumOne + NumTwo);
+                        break;
+
+                    case "-":
+                        Console.WriteLine("Ответ: ");
+                        Console.WriteLine(NumOne - NumTwo);
+                        break;
+
+                    case "/":
+                        if (NumTwo == 0)
+
+                            Console.WriteLine(0);
+                        else
+
+                            Console.WriteLine("Ответ: ");
                         Console.WriteLine(NumOne / NumTwo);
-                    break;
+                        break;
 
-                case "*":
-                    Console.WriteLine("Ответ: ");
-                    Console.WriteLine(NumOne * NumTwo);
-                    break;
+                    case "*":
+                        Console.WriteLine("Ответ: ");
+                        Console.WriteLine(NumOne * NumTwo);
+                        break;
 
-                case "%":
-                    Console.WriteLine("Ответ: ");
-                    Console.WriteLine(NumOne % NumTwo);
-                    break;
+                    case "%":
+                        Console.WriteLine("Ответ: ");
+                        Console.WriteLine(NumOne % NumTwo);
+                        break;
 
-                default:
-                    Console.WriteLine("Неизвестная операция, попробуйте ещё раз ");
-                    break;
+                    default:
+                        Console.WriteLine("Неизвестная операция, попробуйте ещё раз ");
+                        break;
 
+                }
+
+                Console.ReadLine();
             }
 
-           
+
+
 
         }
     }
