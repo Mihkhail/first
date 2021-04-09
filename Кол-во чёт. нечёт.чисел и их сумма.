@@ -1,0 +1,56 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+                Console.Clear();
+
+                uint oddNumbersCount = 0; // нечётные числа
+                uint evenNumbersCount = 0; // чётные числа
+
+                int oddNumbersSum = 0;
+
+                int evenNumbersSum = 0;
+
+                Console.WriteLine("ВВедите первое число диапозона");
+
+                int currentValue = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("ВВедите последнее число диапозона");
+                int limit = int.Parse(Console.ReadLine());
+
+                while (currentValue <= limit)
+                {
+                    if (currentValue % 2 == 0)
+                    {
+                        evenNumbersCount++;
+                        evenNumbersSum += currentValue;
+                    }
+                    else
+                    {
+                        oddNumbersCount++;
+                        oddNumbersSum = oddNumbersSum + currentValue;
+                    }
+
+                    currentValue++;
+                }
+
+
+
+                Console.WriteLine(" Количество нечётных чисел: " + oddNumbersCount);
+                Console.WriteLine(" Количество чётных чисел: " + evenNumbersCount);
+                Console.WriteLine(" Сумма нечётных чисел " + oddNumbersSum);
+                Console.WriteLine(" Сумма чётных чисел " + evenNumbersSum);
+                Console.ReadLine();
+
+            }
+
+
+        }
+    }
+}
